@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+
+.chat-input {
+  resize: none;
+  font-size: 1em;
+  padding: 5px;
+}
