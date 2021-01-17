@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import ChatWindow from './ChatWindow.js';
 import ChatInput from './ChatInput.js';
+import { io } from 'socket.io-client';
+const ENDPOINT = "http://localhost:5000";
 
 function Chat() {
 	const dummy = useRef();
@@ -20,6 +22,7 @@ function Chat() {
 
 	useEffect(() => {
 		console.log("The componenet has mounted. Should only mount once");
+		const socket = io(ENDPOINT);
 	}, []);
 
 
