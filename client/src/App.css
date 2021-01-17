@@ -2,8 +2,42 @@
   text-align: center;
 }
 
+.chat {
+	margin: 20px;
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+}
+
+.sender {
+	font-weight: bold;
+}
+
+p {
+	margin: 5px;
+}
+
+.message {
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.sent {
+	flex-direction: row-reverse
+}
+
 .chat-input {
+	flex: 1;
   resize: none;
   font-size: 1em;
   padding: 5px;
+}
+
+.chat-window {
+	overflow-y: auto;
+	flex: 8;
 }

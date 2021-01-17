@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-function ChatInput(props) { 
+function ChatInput(props) {
   const [input, setInput] = useState("");
 
   // Event handler that handles when the enter key was pressed
@@ -30,4 +30,4 @@ function ChatInput(props) {
   );
 }
 
-export default ChatInput
+export default ChatInput;
