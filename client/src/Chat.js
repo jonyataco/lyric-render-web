@@ -22,6 +22,8 @@ function Chat() {
 
 	useEffect(() => {
 		console.log("The componenet has mounted. Should only mount once");
+		fetch("http://localhost:5000/")
+			.then(data => console.log(data));
 		const socket = io(ENDPOINT);
 	}, []);
 
