@@ -1,8 +1,111 @@
+@font-face {
+	font-family: 'FuturaMedium';
+	src: local('FuturaMedium'), url('./assets/futura.medium.ttf') format('truetype');
+	font-weight: normal;
+}
+
 .App {
   text-align: center;
 }
 
+.background-video {
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.logo {
+	position: relative;
+	width: 300px;
+	height: 300px;
+}
+
+.nav-container {
+	font-family: FuturaMedium;
+	position: relative;
+	justify-content: center;
+	display: flex;
+}
+
+.nav-container > li {
+  padding: 10px;
+  font-size: 2em;
+  color: white;
+  box-sizing: border-box;
+  background-color: black;
+  list-style-type: none;
+}
+
+.nav-container li + li:before {
+	content: " | ";
+	padding: 0 10px;
+}
+
+.nav-container > li a:hover {
+	cursor: pointer;
+	color: grey;
+}
+
+/* Container that is used behind the about-content div. Used to
+ * give dark opacity overlay
+ */
+.about-container {
+	background-color: rgba(0,0,0,.5);
+  position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+.about-content {
+	font-family: FuturaMedium;
+	position: relative;
+	background-color: rgba(0,0,0,1);
+	color: white;
+	overflow-y: auto;
+	width: 70%;
+	height: 80%;
+	z-index: 3;
+}
+
+.about-content > h1 {
+	font-size: 2.5em;
+}
+
+.about-content > ul {
+	list-style-type: none;
+}
+
+.about-content > p {
+	font-size: 1.3em;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+}
+
+.date-title {
+	position: relative;
+	color: white;
+	font-family: FuturaMedium;
+}
+
+.close-button {
+	display: inline;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 .chat {
+	position: relative;
 	margin: 20px;
 	height: 400px;
 	display: flex;
