@@ -105,6 +105,9 @@
 }
 
 .chat {
+	background-color: black;
+	color: white;
+	font-family: FuturaMedium;
 	position: relative;
 	margin: 20px;
 	height: 400px;
@@ -115,10 +118,6 @@
 
 .sender {
 	font-weight: bold;
-}
-
-p {
-	margin: 5px;
 }
 
 .message {
@@ -133,14 +132,62 @@ p {
 	flex-direction: row-reverse
 }
 
-.chat-input {
+.input-boxes {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+.name-input {
+	position: relative;
+	background-color: black;
+	color: white;
+	resize: none;
+	overflow: hidden;
 	flex: 1;
-  resize: none;
-  font-size: 1em;
-  padding: 5px;
+	font-family: FuturaMedium;
+  font-size: 1.3em;
+  padding: 10px;
+	border: 2px solid white;
+	margin: 10px;
+}
+
+.name-input::placeholder {
+	text-align: center;
+	color: grey;
+	opacity: 1;
+}
+
+.chat-input {
+	position: relative;
+	background-color: black;
+	color: white;
+	resize: none;
+	overflow: hidden;
+	flex: 2;
+	font-family: FuturaMedium;
+  font-size: 1.3em;
+  padding: 10px;
+	border: 2px solid white;
+	margin: 10px;
+}
+
+.chat-input::placeholder {
+	text-align: center;
+	color: grey;
+	opacity: 1;
 }
 
 .chat-window {
 	overflow-y: auto;
 	flex: 8;
+	border: 2px solid white;
+	margin: 10px;
+}
+
+.test {
+	border: 2px solid white;
+	margin: 10px;
+	flex: 1;
 }

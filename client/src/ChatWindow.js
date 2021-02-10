@@ -5,12 +5,13 @@
  */
 function ChatWindow(props) {
 
-	const chatMessages = props.messages.map((message, index) =>
+	const chatMessages = props.messages.map(({sender, message}, index) =>
 		<div className="message" key={index}>
-			<p className="sender">Sender: </p>
+			<p className="sender"><b>{sender}</b>: </p>
 			<p>{message}</p>
 		</div>
 	);
+
 
 	return (
 		<div className="chat-window">

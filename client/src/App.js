@@ -2,6 +2,7 @@ import './App.css';
 import Nav from './Nav.js';
 import BackgroundVideo from './assets/video.mp4';
 import HeaderLogo from './assets/logo.svg';
+import Chat from './Chat.js'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 			</video>
 			<img src={HeaderLogo} alt="Live translations logo" className="logo"/>
 			<Nav />
+			<Chat />
     </div>
   );
 }
