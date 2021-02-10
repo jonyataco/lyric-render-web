@@ -110,7 +110,9 @@
 	font-family: FuturaMedium;
 	position: relative;
 	margin: 20px;
-	height: 400px;
+	height: 300px;
+	width: 80%;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	border: 1px solid black;
@@ -118,12 +120,14 @@
 
 .sender {
 	font-weight: bold;
+	margin-right: 10px;
 }
 
 .message {
 	margin-left: 20px;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	font-size: 1.2em;
 	display: flex;
 	align-items: flex-end;
 }
@@ -147,7 +151,7 @@
 	overflow: hidden;
 	flex: 1;
 	font-family: FuturaMedium;
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding: 10px;
 	border: 2px solid white;
 	margin: 10px;
@@ -167,7 +171,7 @@
 	overflow: hidden;
 	flex: 2;
 	font-family: FuturaMedium;
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding: 10px;
 	border: 2px solid white;
 	margin: 10px;

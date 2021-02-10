@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import ChatWindow from './ChatWindow.js';
 import { io } from 'socket.io-client';
 import TextareaAutosize from 'react-textarea-autosize';
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = "/";
+
+let socket
 
 function Chat() {
 	// Dummy that is used to scroll the view into place when a new message is added
@@ -19,9 +21,9 @@ function Chat() {
 
 		// Checks if the enter key was pressed and both input boxes are not empty
 		if (e.key === 'Enter' && newMessage.sender !== "" && newMessage.message !== "") {
-			e.preventDefault()
+			e.preventDefault();
 			setCurrentMessage({...currentMessage, ["message"]: ""});
-			setMessages(currentMessages => [...currentMessages, newMessage]);
+			socket.emit("newMessage", newMessage);
 		}
   }
 
@@ -36,14 +38,15 @@ function Chat() {
 		dummy.current.scrollIntoView({ behavior: 'smooth' });
 	});
 
-	/*
 	useEffect(() => {
 		console.log("The componenet has mounted. Should only mount once");
-		fetch("http://localhost:5000/")
-			.then(data => console.log(data));
-		const socket = io(ENDPOINT);
-	}, []);
-	*/
+		socket = io(ENDPOINT);
+		socket.on("updatedMessages", newMessage => {
+			setMessages(currentMessages => [...currentMessages, newMessage]);
+		});
+
+	}, [ENDPOINT]);
+
 
 	return (
 		<div className="chat">

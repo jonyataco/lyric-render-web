@@ -7,10 +7,11 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-	console.log('a new user has connected');
-	socket.on('chat message', (msg) => {
+	socket.on('newMessage', (msg) => {
+		io.emit('updatedMessages', msg);
 		console.log(msg);
 	});
+
 });
 
 http.listen(5000, () => {
