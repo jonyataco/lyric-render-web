@@ -9,7 +9,7 @@ function About(props) {
 	return (
 		<div className='about-container'>
 			<div className='about-content'>
-				<button onClick={handleExitClicked} className='close-button'>X</button>
+				<div onClick={handleExitClicked} className='close-button'><a>X</a></div>
 				<h1>About</h1>
 				<ul>
 					<li><i>Concept and Performance by Eva Pedriglieri</i></li>
